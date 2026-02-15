@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserShield } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ const Navbar = () => {
           <Link to="/trainers">Trainers</Link>
           <Link to="/gallery">Gallery</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/admin/login" style={{color: '#ff6b00'}}><FaUserShield /> Admin</Link>
         </nav>
       </div>
     </div>
