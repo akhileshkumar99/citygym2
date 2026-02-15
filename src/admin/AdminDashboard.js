@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaUsers, FaDumbbell, FaImages, FaEnvelope, FaStar, FaCog, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaUsers, FaDumbbell, FaImages, FaEnvelope, FaStar, FaCog, FaSignOutAlt, FaArrowLeft } from 'react-icons/fa';
 import MembershipsAdmin from './MembershipsAdmin';
 import TrainersAdmin from './TrainersAdmin';
 import GalleryAdmin from './GalleryAdmin';
@@ -28,6 +28,7 @@ const AdminDashboard = () => {
       <div className="admin-sidebar">
         <h2>City Gym Admin</h2>
         <nav>
+          <Link to="/"><FaArrowLeft /> Back to Home</Link>
           <Link to="/admin/dashboard"><FaHome /> Dashboard</Link>
           <Link to="/admin/memberships"><FaDumbbell /> Memberships</Link>
           <Link to="/admin/trainers"><FaUsers /> Trainers</Link>
