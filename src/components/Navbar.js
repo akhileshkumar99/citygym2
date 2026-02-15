@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaUserShield } from 'react-icons/fa';
+import { FaUserShield, FaDumbbell } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
-        <h1>CITY GYM</h1>
+        <h1 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+          <FaDumbbell style={{color: '#ff6b00'}} /> CITY GYM
+        </h1>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/membership">Membership</Link>
