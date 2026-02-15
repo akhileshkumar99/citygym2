@@ -95,9 +95,9 @@ const GalleryAdmin = () => {
         {gallery.map(item => (
           <div key={item._id} className="gallery-item" style={{position: 'relative'}}>
             {item.type === 'video' ? (
-              <video src={`http://localhost:5000${item.url}`} style={{width: '100%', height: '250px'}} />
+              <video src={`https://citygym1.onrender.com${item.url}`} style={{width: '100%', height: '250px'}} controls />
             ) : (
-              <img src={`http://localhost:5000${item.url}`} alt={item.title} />
+              <img src={`https://citygym1.onrender.com${item.url}`} alt={item.title} />
             )}
             <button className="btn-delete" style={{position: 'absolute', top: '10px', right: '10px'}} onClick={() => handleDelete(item._id)}>Delete</button>
           </div>

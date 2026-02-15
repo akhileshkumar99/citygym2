@@ -44,9 +44,9 @@ const Gallery = () => {
           {gallery.map(item => (
             <div key={item._id} className="gallery-item">
               {item.type === 'video' ? (
-                <video src={`http://localhost:5000${item.url}`} controls style={{width: '100%', height: '250px'}} />
+                <video src={`https://citygym1.onrender.com${item.url}`} controls style={{width: '100%', height: '250px'}} />
               ) : (
-                <img src={`http://localhost:5000${item.url}`} alt={item.title} />
+                <img src={`https://citygym1.onrender.com${item.url}`} alt={item.title} />
               )}
             </div>
           ))}
