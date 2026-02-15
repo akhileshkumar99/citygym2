@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: '/api'
+  baseURL: "https://citygym1.onrender.com/api"   // 🔥 backend render link
 });
 
 API.interceptors.request.use((req) => {
