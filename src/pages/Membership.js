@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaCheck } from 'react-icons/fa';
 import API from '../utils/api';
 
 const Membership = () => {
