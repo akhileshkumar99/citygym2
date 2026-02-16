@@ -41,13 +41,13 @@ const AdminDashboard = () => {
       </div>
       <div className="admin-content">
         <Routes>
-          <Route path="/dashboard" element={<h2>Welcome to Admin Dashboard</h2>} />
-          <Route path="/memberships" element={<MembershipsAdmin />} />
-          <Route path="/trainers" element={<TrainersAdmin />} />
-          <Route path="/gallery" element={<GalleryAdmin />} />
-          <Route path="/contacts" element={<ContactsAdmin />} />
-          <Route path="/testimonials" element={<TestimonialsAdmin />} />
-          <Route path="/settings" element={<SettingsAdmin />} />
+          <Route path="dashboard" element={<h2>Welcome to Admin Dashboard</h2>} />
+          <Route path="memberships" element={<MembershipsAdmin />} />
+          <Route path="trainers" element={<TrainersAdmin />} />
+          <Route path="gallery" element={<GalleryAdmin />} />
+          <Route path="contacts" element={<ContactsAdmin />} />
+          <Route path="testimonials" element={<TestimonialsAdmin />} />
+          <Route path="settings" element={<SettingsAdmin />} />
         </Routes>
       </div>
     </div>
