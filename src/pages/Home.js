@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaDumbbell, FaHeartbeat, FaUsers, FaAppleAlt, FaWhatsapp, FaStar, FaClock, FaTrophy, FaQuestionCircle, FaVideo, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaDumbbell, FaHeartbeat, FaUsers, FaAppleAlt, FaWhatsapp, FaStar, FaClock, FaTrophy, FaQuestionCircle } from 'react-icons/fa';
 import API from '../utils/api';
 import BMICalculator from '../components/BMICalculator';
 
@@ -8,7 +8,6 @@ const Home = () => {
   const [settings, setSettings] = useState({});
   const [testimonials, setTestimonials] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [memberCount, setMemberCount] = useState(500);
 
   const heroImages = [
     'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200',
