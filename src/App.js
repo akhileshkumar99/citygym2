@@ -22,19 +22,11 @@ function App() {
         <Routes>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/*" element={<AdminDashboard />} />
-          <Route path="/*" element={
-            <>
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/membership" element={<Membership />} />
-                <Route path="/trainers" element={<Trainers />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-              <Footer />
-            </>
-          } />
+          <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
+          <Route path="/membership" element={<><Navbar /><Membership /><Footer /></>} />
+          <Route path="/trainers" element={<><Navbar /><Trainers /><Footer /></>} />
+          <Route path="/gallery" element={<><Navbar /><Gallery /><Footer /></>} />
+          <Route path="/contact" element={<><Navbar /><Contact /><Footer /></>} />
         </Routes>
       </div>
     </Router>
