@@ -44,9 +44,13 @@ const Gallery = () => {
           {gallery.map(item => (
             <div key={item._id} className="gallery-item">
               {item.type === 'video' ? (
-                <video src={`https://citygym1.onrender.com${item.url}`} controls style={{width: '100%', height: '250px'}} />
+                <video src={item.url?.startsWith('http') ? item.url : `https://citygym1.onrender.com${item.url}`} controls style={{width: '100%', height: '250px'}} />
               ) : (
-                <img src={`https://citygym1.onrender.com${item.url}`} alt={item.title} />
+                <img 
+                  src={item.url?.startsWith('http') ? item.url : `https://citygym1.onrender.com${item.url}`} 
+                  alt={item.title}
+                  onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400'}
+                />
               )}
             </div>
           ))}

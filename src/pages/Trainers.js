@@ -17,7 +17,11 @@ const Trainers = () => {
         <div className="trainers-grid">
           {trainers.map(trainer => (
             <div key={trainer._id} className="trainer-card">
-              <img src={`http://localhost:5000${trainer.photo}`} alt={trainer.name} />
+              <img 
+                src={trainer.photo?.startsWith('http') ? trainer.photo : `https://citygym1.onrender.com${trainer.photo}`} 
+                alt={trainer.name}
+                onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400'}
+              />
               <div className="trainer-info">
                 <h3>{trainer.name}</h3>
                 <p><strong>Experience:</strong> {trainer.experience}</p>
